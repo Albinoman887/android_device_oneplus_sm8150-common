@@ -186,8 +186,14 @@ VENDOR_SECURITY_PATCH := 2019-09-05
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private \
+                                   device/qcom/sepolicy/generic/private \
+                                   device/qcom/sepolicy/qva/private
+
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR +=  $(VENDOR_PATH)/sepolicy/public \
+                                   device/qcom/sepolicy/generic/public \
+                                   device/qcom/sepolicy/qva/public
+
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 
 # Sensors
