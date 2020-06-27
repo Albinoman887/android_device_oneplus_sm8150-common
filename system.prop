@@ -95,6 +95,9 @@ persist.rcs.supported=0
 persist.vendor.naruto.light.support=true
 persist.vendor.sensors.enable.mag_filter=true
 
+gf.debug.dump_dsp_log=true
+gf.debug.dump_dsp_log=1
+
 # WiFi
 config.disable_rtt=true
 
