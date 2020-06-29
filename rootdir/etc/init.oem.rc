@@ -29,7 +29,7 @@ on post-fs-data
     mkdir /data/fpc_images/enroll 0770 system system
     mkdir /data/fpc 0770 system system
     mkdir /data/vendor_de/silead 0770 system system
-   # mkdir /mnt/vendor/persist/silead 0777 system system
+    mkdir /mnt/vendor/persist/silead 0777 system system
     mkdir /data/coredump  0777 system system
     mkdir /data/theme 0775 system system
     mkdir /data/mdm 0775 system system
@@ -42,8 +42,8 @@ on post-fs-data
     mkdir /data/oem_log  0770 system system
     #endif /*VENDOR_EDIT*/
 #ifdef VENDOR_EDIT
-   # mkdir /mnt/vendor/persist/hdcp  775 media mediadrm
-   # restorecon /mnt/vendor/persist/hdcp
+    mkdir /mnt/vendor/persist/hdcp  775 media mediadrm
+    restorecon /mnt/vendor/persist/hdcp
 #endif /*VENDOR_EDIT*/
     mkdir /data/vendor/misc/qsee/face/  0770 system system
 #ifdef VENDOR_EDIT
