@@ -89,6 +89,7 @@ on boot
     chown system system /sys/devices/platform/soc/soc:silead_fp/screen_state
     chmod 0666 /dev/qseecom
     #liuyan 2017/7/27 add for goodix fp
+    setprop vendor.boot.verifiedbootstate ${ro.boot.verifiedbootstate}
     chmod 0666 /dev/goodix_fp
     chmod 0666 /dev/silead_fp
     chown system system /dev/silead_fp
