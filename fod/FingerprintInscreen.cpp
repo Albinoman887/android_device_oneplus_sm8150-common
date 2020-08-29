@@ -147,12 +147,12 @@ Return<bool> FingerprintInscreen::handleError(int32_t error, int32_t vendorCode)
     switch (error) {
         case FINGERPRINT_ERROR_CANCELED:
             if (vendorCode == 0) {
-                this->mIsEnrolling = false;
+              //  this->mIsEnrolling = false;
             }
             return false;
         case FINGERPRINT_ERROR_VENDOR:
             // Ignore vendorCode 5
-            return vendorCode == 5;
+           // return vendorCode == 5;
         default:
             return false;
     }
