@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -147,12 +147,12 @@ Return<bool> FingerprintInscreen::handleError(int32_t error, int32_t vendorCode)
     switch (error) {
         case FINGERPRINT_ERROR_CANCELED:
             if (vendorCode == 0) {
-              //  this->mIsEnrolling = false;
+                this->mIsEnrolling = false;
             }
             return false;
         case FINGERPRINT_ERROR_VENDOR:
-            // Ignore vendorCode 5
-           // return vendorCode == 5;
+            // Ignore vendorCode 6
+            return vendorCode == 6;
         default:
             return false;
     }
